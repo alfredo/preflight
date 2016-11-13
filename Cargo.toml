@@ -1,0 +1,7 @@
+[package]
+name = "preflight"
+version = "0.1.0"
+authors = ["Alfredo Aguirre <alfredo@madewithbyt.es>"]
+
+[dependencies]
+hyper = "0.9"
