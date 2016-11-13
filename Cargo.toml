@@ -5,3 +5,4 @@ authors = ["Alfredo Aguirre <alfredo@madewithbyt.es>"]
 
 [dependencies]
 hyper = "0.9"
+emojicons = "1.0.1"
