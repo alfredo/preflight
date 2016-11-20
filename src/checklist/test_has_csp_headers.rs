@@ -1,9 +1,10 @@
 use hyper::client::response::Response;
 
+use headers;
 
 pub fn execute(response: &Response) -> bool {
-    let csp_headers = response.headers.get_raw("Content-Security-Policy");
-    let csp_headers_report = response.headers.get_raw("Content-Security-Policy-Report-Only");
+    let csp_headers = response.headers.get::<headers::ContentSecurityPolicy>();
+    let csp_headers_report = response.headers.get::<headers::ContentSecurityPolicyReportOnly>();
     if csp_headers.is_some() {
         ::notifications::approved("Site provides CSP headers");
     } else if csp_headers_report.is_some() {
