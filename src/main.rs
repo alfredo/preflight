@@ -2,6 +2,7 @@
 extern crate hyper;
 
 use hyper::client::Client;
+use hyper::client::response::Response;
 
 pub mod checklist;
 
@@ -25,6 +26,6 @@ pub mod notifications {
 fn main() {
     let url = "http://madewithbytes.com/";
     let client = Client::new();
-    let response = client.get(url).send().unwrap();
-    checklist::test_url_is_https::execute(response);
+    let response: Response = client.get(url).send().unwrap();
+    checklist::test_url_is_https::execute(&response);
 }
