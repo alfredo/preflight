@@ -1,11 +1,11 @@
-use hyper::client::Client;
-use hyper::client::response::Response;
 extern crate emojicons;
 #[macro_use] extern crate hyper;
 
 pub mod checklist;
 pub mod headers;
 
+use hyper::client::Client;
+use hyper::client::response::Response;
 
 static APPROVED: &'static str = ":white_check_mark:";
 static FAILED: &'static str = ":no_entry:";
