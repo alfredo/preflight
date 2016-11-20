@@ -9,6 +9,18 @@ pub mod checklist;
 static APPROVED: &'static str = ":white_check_mark:";
 static FAILED: &'static str = ":no_entry:";
 
+pub mod notifications {
+    use emojicons::EmojiFormatter;
+
+    pub fn approved(text: &str){
+        println!("{}  {}", EmojiFormatter(::APPROVED), text);
+    }
+
+    pub fn failed(text: &str){
+        println!("{}  {}", EmojiFormatter(::FAILED), text);
+    }
+
+}
 
 fn main() {
     let url = "http://madewithbytes.com/";
