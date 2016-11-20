@@ -34,4 +34,5 @@ fn main() {
     let response: Response = client.get(url).send().unwrap();
     checklist::test_url_is_https::execute(&response);
     checklist::test_has_csp_headers::execute(&response);
+    checklist::test_has_content_type_header::execute(&response);
 }
