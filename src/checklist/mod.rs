@@ -1,1 +1,1 @@
-pub mod test_is_https_enabled;
+pub mod test_url_is_https;

@@ -26,5 +26,5 @@ fn main() {
     let url = "http://madewithbytes.com/";
     let client = Client::new();
     let response = client.get(url).send().unwrap();
-    checklist::test_is_https_enabled::execute(response);
+    checklist::test_url_is_https::execute(response);
 }
