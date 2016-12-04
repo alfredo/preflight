@@ -36,4 +36,5 @@ fn main() {
     checklist::test_has_csp_headers::execute(&response);
     checklist::test_has_content_type_header::execute(&response);
     checklist::test_has_frame_options_header::execute(&response);
+    checklist::test_has_xss_protection_header::execute(&response);
 }
