@@ -4,11 +4,11 @@ use headers;
 
 
 pub fn execute(response: &Response) -> bool {
-    let frame_options = response.headers.get::<headers::XXSSProtection>();
-    if frame_options.is_some() {
-        ::notifications::approved(&format!("Site provides `X-XSS-Protection: {}`", frame_options.unwrap()))
+    let xss_protection = response.headers.get::<headers::XXSSProtection>();
+    if xss_protection.is_some() {
+        ::notifications::approved(&format!("Site provides `X-XSS-Protection: {}`", xss_protection.unwrap()))
     } else {
         ::notifications::failed("Site does not provide `X-XSS-Protection` header. (Browser won't stop loading content when they detect XSS).");
     }
-    frame_options.is_some()
+    xss_protection.is_some()
 }
