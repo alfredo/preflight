@@ -41,4 +41,5 @@ fn main() {
     checklist::test_has_content_type_header::execute(&response);
     checklist::test_has_frame_options_header::execute(&response);
     checklist::test_has_xss_protection_header::execute(&response);
+    checklist::test_cookie_header_is_secure::execute(&response);
 }
