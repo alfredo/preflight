@@ -26,6 +26,10 @@ pub mod notifications {
         println!("{}  {}", EmojiFormatter(::WARNING), text);
     }
 
+    pub fn header(text: &str) {
+        println!("***** {} *****", text);
+    }
+
 }
 
 fn main() {
